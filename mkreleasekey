@@ -1,0 +1,3 @@
+#!/bin/sh
+rm -f release.keystore
+keytool -genkeypair -alias AndroidProduction -keyalg RSA -keystore release.keystore -keysize 4096 -validity 1825 -storepass p@ssw0rd -keypass p@ssw0rd

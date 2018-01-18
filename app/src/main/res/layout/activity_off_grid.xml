@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="ru.cyberspacelabs.nocounterfeit.OffGridActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/iconGPSStatus"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="41dp"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="53dp"
+        android:src="@drawable/ic_gps_off_white_24dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/iconConnectionStatus"
+        android:layout_below="@+id/iconGPSStatus"
+        android:layout_alignLeft="@+id/iconGPSStatus"
+        android:layout_alignStart="@+id/iconGPSStatus"
+        android:layout_marginTop="43dp"
+        android:src="@drawable/ic_signal_cellular_connected_no_internet_4_bar_white_24dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_enable_gps"
+        android:id="@+id/buttonEnableGPS"
+        android:layout_alignTop="@+id/iconGPSStatus"
+        android:layout_toRightOf="@+id/iconGPSStatus"
+        android:layout_marginLeft="38dp"
+        android:layout_marginStart="38dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_enable_network"
+        android:id="@+id/buttonEnableNetwork"
+        android:layout_alignTop="@+id/iconConnectionStatus"
+        android:layout_toRightOf="@+id/iconConnectionStatus"
+        android:layout_marginLeft="38dp"
+        android:layout_marginStart="38dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/labelGPSOK"
+        android:visibility="gone"
+        android:text="@string/label_location_enabled"
+        android:layout_alignTop="@+id/iconGPSStatus"
+        android:layout_toRightOf="@+id/iconGPSStatus"
+        android:layout_marginLeft="38dp"
+        android:layout_marginStart="38dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/labelInternetOK"
+        android:visibility="gone"
+        android:text="@string/label_network_enabled"
+        android:layout_alignTop="@+id/iconConnectionStatus"
+        android:layout_toRightOf="@+id/iconConnectionStatus"
+        android:layout_marginLeft="38dp"
+        android:layout_marginStart="38dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+</RelativeLayout>

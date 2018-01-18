@@ -1,0 +1,27 @@
+1. Program purpose
+The program is intended for check of production with the protective system "Field of Check".
+When pressing the Application launcher icon, app will probe Internet connectivity and GNSS/LBS signal in your mobile device,
+and if they are absent, you will be prompted to enable them.
+If all preconditions succeeded, then you don't see the check-screen.
+There will be further lock-on  – it can borrow from 3 seconds to 5 minutes depending on the speed of the Internet and quality
+ of the mobile device chipset, firmware and GNSS signal.
+ After data acquisition succession, app allow you to turn on the camera of the mobile device and will ask you to guide it on
+ the image of the protective "Field of check".
+ We ask you to point the camera closer to this element! After receiving all elements "Fields of Check" the appendix will verify data with data on the website and will give result on the screen.
+
+2. Geocoding, maps and imagery
+Geocoding, reverse geocoding, map data, tiles and imagery provided by Google, Inc via respective API and services and still
+out of scope of responsibility of developers of this software.
+Location dilution of precision (DoP) is relevant according the same used by Google Maps.
+
+3. Proprietary software notification
+This application include linked code of Google Play Services API, Google Maps, and Multi-DEX support library. To be fully functional,
+it requires Android OS instance, licensed and certified by Google, Inc to particular device vendor. Using this application on top of
+custom firmware (such as, but not limited - Lineage OS) become developers out of responsibility of malfunction or inappropriate
+functioning of this software.
+
+4. Open source software, used and incorporated into application
+ 4.1 Zebra Crossing (ZXing) Barcode Scanning Library
+ 4.2 OkHttp 3.6 HTTP Client Library
+ 4.3 Google GSON 2.4 JSON Library
+ 4.4 BouncyCastle Cryptoprovider 1.46
