@@ -8,6 +8,7 @@
     android:layout_marginTop="8dp"
     tools:context="ru.cyberspacelabs.nocounterfeit.MainActivity">
 
+
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="wrap_content"
@@ -21,14 +22,22 @@
         android:scaleType="fitXY"
         android:src="@drawable/background" />
 
+    <fragment
+        android:id="@+id/mapView"
+        android:name="com.google.android.gms.maps.MapFragment"
+        android:layout_width="350dp"
+        android:layout_height="200dp"
+        android:layout_below="@+id/text_location"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="false" />
 
     <Button
         android:id="@+id/button_scan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_below="@+id/mapView"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="133dp"
+        android:layout_marginTop="25dp"
         android:background="@drawable/scanbtn"
         android:textAlignment="center"
         android:textSize="24sp"
@@ -55,11 +64,4 @@
         android:alpha="255"
         android:src="@drawable/ic_location_on_white_24dp" />
 
-    <fragment
-        android:id="@+id/mapView"
-        android:name="com.google.android.gms.maps.MapFragment"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/button_scan"
-        android:layout_alignTop="@+id/imageView3" />
 </RelativeLayout>
