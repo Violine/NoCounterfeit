@@ -63,6 +63,7 @@ public class MainActivity extends ConfigurableActivity implements LocationListen
 	private LocationManager locationManager;
 	private Gson gson;
 	private SimpleDateFormat timestampFormat;
+	private Location myLocation;
 
 	private void resolveControls() {
 		buttonScan = (Button) findViewById(R.id.button_scan);
@@ -113,6 +114,14 @@ public class MainActivity extends ConfigurableActivity implements LocationListen
 		}
 	}
 
+	private String formatLocation(Location location) {
+		if (location == null)
+			return "";
+		return String.format(
+				"Coordinates: lat = %1$.4f, lon = %2$.4f, time = %3$tF %3$tT",
+				location.getLatitude(), location.getLongitude(), new Date(
+						location.getTime()));
+	}
 
 	private Intent createScanIntent(CharSequence prompt) {
 		Intent intent = new Intent(this, CaptureActivity.class);
