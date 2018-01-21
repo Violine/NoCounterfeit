@@ -52,7 +52,7 @@
         android:icon="@drawable/nc"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/OriginalTheme"
+        android:theme="@style/BlackTheme"
         android:name=".ApplicationState">
         <activity android:name=".MainActivity" android:launchMode="singleTop"
             android:theme="@style/CaptureTheme" />
