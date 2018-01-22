@@ -22,6 +22,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.maps.model.CameraPosition;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.zxing.client.android.CaptureActivity;
@@ -54,7 +55,8 @@ public class MainActivity extends ConfigurableActivity implements LocationListen
 	private static long MIN_TIME_DELTA = 15000; // 1 min
 	private static final String LOG_LOCATION = "location.txt";
 
-	GoogleMap googleMap;
+	private GoogleMap googleMap;
+	private UiSettings mUiSettings;
 
 	private Button buttonScan;
 	private TextView locationStatus;
@@ -63,7 +65,7 @@ public class MainActivity extends ConfigurableActivity implements LocationListen
 	private LocationManager locationManager;
 	private Gson gson;
 	private SimpleDateFormat timestampFormat;
-	private Location myLocation;
+
 
 	private void resolveControls() {
 		buttonScan = (Button) findViewById(R.id.button_scan);
@@ -84,11 +86,35 @@ public class MainActivity extends ConfigurableActivity implements LocationListen
 			if(null == googleMap){
 				googleMap = ((MapFragment) getFragmentManager().findFragmentById(
 						R.id.mapView)).getMap();
+				googleMap.getUiSettings().setMyLocationButtonEnabled(true);
+				if (ActivityCompat.checkSelfPermission(this,
+						Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
+						|| ActivityCompat.checkSelfPermission(this,
+						Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+					return;
+				}
+				mUiSettings = googleMap.getUiSettings();
+				googleMap.setMyLocationEnabled(true);
+				mUiSettings.setZoomControlsEnabled(true);
 
-				/**
-				 * If the map is still null after attempted initialisation,
-				 * show an error to the user
-				 */
+				if (locationManager != null) {
+					locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, MIN_TIME_DELTA,
+							MIN_DISTANCE_DELTA, this);
+					Location location = locationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
+					if (location != null) {
+						double latitude = location.getLatitude();
+						double longitude = location.getLongitude();
+						googleMap.moveCamera(CameraUpdateFactory
+								.newLatLngZoom(new LatLng(latitude, longitude), 17));
+						if(null != googleMap) {
+							googleMap.addMarker(new MarkerOptions()
+									.position(new LatLng(latitude, longitude))
+									.title("Marker")
+									.draggable(true)
+							);
+						}
+					}
+				}
 				if(null == googleMap) {
 					Toast.makeText(getApplicationContext(),
 							"Error creating map",Toast.LENGTH_SHORT).show();
@@ -102,6 +128,7 @@ public class MainActivity extends ConfigurableActivity implements LocationListen
 	/**
 	 * Adds a marker to the map
 	 */
+
 	private void addMarker(){
 
 		/** Make sure that the map has been initialised **/
@@ -285,7 +312,7 @@ public class MainActivity extends ConfigurableActivity implements LocationListen
 		createGeocoder();
 
 		createMapView();
-		addMarker();
+		//addMarker();
 
 		locationStatus.setText(R.string.location_in_progress);
 	}
