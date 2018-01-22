@@ -50,7 +50,7 @@
        <item name="colorButtonNormal">#212121</item>
        <item name="android:textColorSecondary">#FFFFFF</item>
    </style>
-   <style name="OriginalTheme" parent="Theme.AppCompat.Light.NoActionBar">
+   <style name="OriginalTheme" parent="Theme.AppCompat.NoActionBar">
        <!-- Customize your theme here. -->
        <item name="colorPrimary">#00695C</item>
        <item name="colorPrimaryDark">#004d40</item>
