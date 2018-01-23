@@ -34,42 +34,39 @@
         android:name="com.google.android.gms.maps.MapFragment"
         android:layout_width="360dp"
         android:layout_height="match_parent"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/text_location"
+        android:layout_alignParentTop="false"
+        android:layout_alignTop="@+id/imageLocation"
         android:layout_centerInParent="false" />
 
     <Button
         android:id="@+id/button_scan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
         android:layout_alignWithParentIfMissing="false"
-        android:layout_centerInParent="false"
         android:layout_centerVertical="true"
-        android:layout_marginEnd="25dp"
-        android:layout_marginRight="25dp"
-        android:background="@drawable/scanbtn" />
+        android:layout_marginLeft="22dp"
+        android:layout_marginStart="22dp"
+        android:layout_toEndOf="@+id/mapView"
+        android:layout_toRightOf="@+id/mapView"
+        android:background="@drawable/scanbtn"
+        android:elevation="0dp" />
 
     <TextView
         android:id="@+id/text_location"
         android:layout_width="fill_parent"
         android:layout_height="40dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_toEndOf="@+id/imageLocation"
+        android:layout_below="@+id/toolbar"
+        android:layout_toLeftOf="@+id/imageView3"
         android:layout_toRightOf="@+id/imageLocation"
         android:inputType="textMultiLine"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/common_plus_signin_btn_text_light_default" />
 
     <ImageView
         android:id="@+id/imageLocation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
+        android:layout_alignTop="@id/text_location"
         android:alpha="255"
         android:src="@drawable/ic_location_on_white_24dp" />
 
