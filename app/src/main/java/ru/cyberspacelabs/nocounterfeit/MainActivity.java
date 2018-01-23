@@ -13,6 +13,7 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -109,7 +110,7 @@ public class MainActivity extends ConfigurableActivity implements LocationListen
 						if(null != googleMap) {
 							googleMap.addMarker(new MarkerOptions()
 									.position(new LatLng(latitude, longitude))
-									.title("Marker")
+									.title(getResources().getString(R.string.you_here_string))
 									.draggable(true)
 							);
 						}
@@ -122,22 +123,6 @@ public class MainActivity extends ConfigurableActivity implements LocationListen
 			}
 		} catch (NullPointerException exception){
 			Log.e("mapApp", exception.toString());
-		}
-	}
-
-	/**
-	 * Adds a marker to the map
-	 */
-
-	private void addMarker(){
-
-		/** Make sure that the map has been initialised **/
-		if(null != googleMap){
-			googleMap.addMarker(new MarkerOptions()
-					.position(new LatLng(0, 0))
-					.title("Marker")
-					.draggable(true)
-			);
 		}
 	}
 
@@ -308,11 +293,11 @@ public class MainActivity extends ConfigurableActivity implements LocationListen
 		timestampFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss ZZZ");
 		resolveControls();
 		bindActions();
-		setTitle(R.string.activity_main_title);
+		// setTitle(R.string.activity_main_title);
 		createGeocoder();
-
 		createMapView();
-		//addMarker();
+		Toolbar myToolbar = (Toolbar) findViewById(R.id.toolbar);
+		setSupportActionBar(myToolbar);
 
 		locationStatus.setText(R.string.location_in_progress);
 	}
@@ -452,8 +437,7 @@ public class MainActivity extends ConfigurableActivity implements LocationListen
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		MenuInflater inflater = getMenuInflater();
-		inflater.inflate(R.menu.default_menu, menu);
+		getMenuInflater().inflate(R.menu.default_menu, menu);
 		return true;
 	}
 

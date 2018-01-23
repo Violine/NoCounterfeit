@@ -202,4 +202,5 @@
     <item>Темная</item>
     <item>Светлая</item>
   </string-array>
+    <string name="you_here_string">Вы здесь!</string>
 </resources>
