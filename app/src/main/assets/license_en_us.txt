@@ -1,0 +1,92 @@
+LICENSE AGREEMENT
+for the Use of NOCOUNTERFEIT Goods Authentication Program software products and/or online services.
+
+The present document, the License Agreement for the Use of NC Goods Authentication Program software products and/or online services (hereinafter – the License, the Agreement), constitutes an offer from .... Limited Liability Company (hereinafter - the Rightholder, the Licensor) to enter into an agreement on the terms and conditions set out below.
+Prior to download, installation or other use of NC software products and/or online services please refer to the terms and conditions of this license agreement.
+This Agreement is deemed to be in effect from the time NC Software Product is installed on (copied to) any device and/or otherwise put into use.
+1. GENERAL
+1.1. By starting the use of NC software product and/or online services (hereinafter - the Product, Services, NC), you acknowledge that:
+а) You have read and understood all terms and conditions of this Agreement before using NC Software Products and/or Online Services.
+b) Your use of NC Software Products and/or Online Services in any form (in particular, installation of the Product on any device) means that you accept all the terms and conditions of this Agreement without any exemptions or restrictions on your part. Any use of NC Software Products and/or Online Services under other terms and conditions is not allowed.
+c) If you disagree with any terms or conditions of this Agreement or are not authorized to enter into it you must discontinue any use of NC Software Products and/or Online Services immediately.
+d) The Agreement (including any part thereof) may be amended by the Rightholder without any special notice. The new revision of the Agreement shall enter into force from the time of its posting on the Rightholder’s website, unless otherwise stipulated in the new revision of the Agreement.
+
+1.2. In all respects that are not covered by this Agreement the relations connected with the use of NC Online Services shall be governed by the Agreement for the Use of NC Services (WWW.NOCOUNTERFEIT.INFO) and the Privacy Policy (WWW.NOCOUNTERFEIT.INFO).
+1.3. The words and expressions used in this License Agreement shall have the following meanings, unless otherwise expressly defined below:
+a) License (Agreement) means this License Agreement for the Use of NC Software Products and/or Online Services.
+b) NC Online Services means a set of NC Software Products and the Rightholder’s hardware which are made accessible to Users under the terms and conditions set out in this Agreement and/or other agreements.
+c) Rightholder means ...... Limited Liability Company.
+d) You, User means a legal entity or a private person that entered into this Agreement with the Rightholder for its/their own benefit or for the benefit of others in accordance with the requirements of the applicable laws and this Agreement.
+e) NC Software Products means the software solutions owned by the Rightholder along with each individual computer program or database incorporated in them or used together with them, as well as all their subsequent updates and modifications intended for use on desktop and handheld personal computers, mobile phones, PDAs, smartphones and other devices.
+f) Product means the Software Product and/or Online Services in the meaning defined in this Agreement.
+g) Rightholder’s Website means the websites hosted on domain names at WWW.NOCOUNTERFEIT.INFO
+h) Use of the Product means any actions connected with the operation of the Product in accordance with its purpose (including writing to the memory of personal computers).
+i) Commercial Use means the use of NC Software Products and/or Online Services as well as other Intellectual Property (going beyond the use permitted under this Agreement) by a private person for income (profit) generation purposes, and by a sole proprietor or a legal entity – for the purposes of gaining business advantage, including providing them or affording access to them for a compensation, that is, for a fee or any consideration in this or that form. Commercial Use of NC Software Products and/or Online Services and other Intellectual Property may be permitted by the Rightholder under a separate agreement with the User.
+j) Privacy Policy means the Privacy Policy posted on the Internet at WWW.NOCOUNTERFEIT.INFO
+
+1.4. This Agreement may contain other terms and definitions that are not listed in section 1.3 hereof. Such terms shall be construed in accordance with the text of the Agreement. If a term has no unambiguous explanation or definition in the text of the Agreement, one shall rely on its explanation given: in the first place, in the License Agreement, then – in the Privacy Policy, thirdly – in the laws of the Russian Federation and subsequently, by customary business practices and the scientific doctrine.
+2. SCOPE
+2.1. The Licensor shall grant to the User a personal, noncommercial, ordinary (nonexclusive), nontransferable license for the installation and/or use of the Product.
+2.2. The Licensor grants to the User the right to use the Product (an ordinary nonexclusive license) subject to all restrictions on and conditions of use of the Product in accordance with its technical documentation, functionality and conditions of this Agreement.
+2.3. All provisions of this Agreement shall apply both to the Program in general and to its individual components.
+3. EXCLUSIVE RIGHTS
+3.1. NC Software Products and Online Services in general along with the computer programs, databases, images and other items regulated by copyrights and/or related rights that are incorporated in them or used together with them, as well as any items regulated by patent rights, trademarks, brand names and trade names, and other parts of NC Software Products and/or Online Services (regardless of whether they can be extracted and used on their own or not) taken separately are afforded protection by the applicable law and are regulated by the Rightholder’s exclusive rights.
+3.2. Any use of the Product or other items specified in section 3.1 in violation of the terms and conditions of this Agreement is regarded as a violation of the Licensor’s rights and constitutes sufficient grounds for depriving the User of the rights granted under this Agreement.
+3.3. A notice of rights to Intellectual Property shall be placed on such Intellectual Property or communicated to the User with the delivery of such Intellectual Property. The absence of the notice of rights does not mean absence of its legal protection or permission for its free use.
+3.4. This Agreement does not grant to the User any rights to use the Trademarks and Service Marks of the Licensor and/or its partners. The Licensor does not grant to the User any express or implied rights in respect of the Licensor’s patents, copyrights, trademarks or trade secrets, except for those that are expressly stated in section 2 hereof.
+3.5. The Licensor warrants that it has all the rights required by this Agreement to be granted to the User, including the Program documentation.
+
+4. LICENSE
+4.1. Any use of NC Software Products and/or Online Services is allowed under the terms and conditions of this License only. Should the User disagree with any of the terms and conditions of the License, the User may not use the Product for any purpose. The Product may not be used in breach (non-performance) of any provision of the License.
+4.2. The rights and uses of the Product that are not expressly granted/permitted to the User under this Agreement shall be deemed withheld / prohibited by the Rightholder.
+4.3. Under this License, the User is allowed to use the Product for noncommercial purposes free of charge.
+4.4. The Rightholder may place in NC Software Products and/or Online Services any content and/or advertising and links to third-party websites and grant the right to use the Product in this way to third parties under a separate agreement.
+5. CONDITIONS OF USE AND RESTRICTIONS
+5.1. The Rightholder grants to the User the right to use NC Software Products and/or Online Services under an ordinary (nonexclusive) nontransferable license in the territory of all countries of the world in the manner specified in this section.
+5.2. The User may use the Product for its intended purpose in accordance with the User Manual, install it on a desktop or handheld personal computer(s), smartphone(s) or other devices. The User may install the Product on an unlimited number of Devices.
+5.3. The User may reproduce the Product, copies of which are distributed by the Rightholder, for noncommercial purposes free of charge on any Devices and other kinds of tangible media provided that it keeps intact the combination, components and content of the Product as compared to the form in which it is provided and/or recommended for use by the Rightholder.
+5.4. The User may distribute the Product by transferring its copies reproduced in accordance with section 5.3 of this Agreement for noncommercial purposes free of charge and maintaining their integrity, unless otherwise provided in the Agreement with the Rightholder.
+5.5. The User may use NC Online Services for their intended functional purpose on an unlimited number of Devices in accordance with the terms and conditions of this License. At the Rightholder’s discretion, to use some NC Online Services or their additional functionality the User may be required to accept the terms and conditions of a separate agreement.
+5.6. The right to use the Product in accordance with this section is granted subject to the User’s compliance with the restrictions set out in this Agreement.
+5.7. THE PRODUCT MAY BE PROTECTED WITH DIGITAL RIGHTS MANAGEMENT SOFTWARE IN RESPECT OF DIGITAL DATA STORAGE MEDIA. IN THIS CASE, by installing and/or using the Product the User ACKNOWLEDGES AND agrees with THE FOLLOWING:
+5.7.1. INSTALLATION OF THE PRODUCT MAY RESULT IN THE INSTALLATION OF DIGITAL RIGHTS MANAGEMENT SOFTWARE ON THE USER’S DEVICE.
+5.7.2. THE DIGITAL RIGHTS MANAGEMENT SOFTWARE MAY LIMIT THE NUMBER OF PRODUCT INSTALLATIONS.
+5.7.3. ADDITIONAL COMPONENTS REQUIRED FOR COPY PROTECTION MAY BE INSTALLED ON THE USER’S DEVICE.
+5.7.4. INTERNET CONNECTION MAY BE REQUIRED DURING THE INSTALLATION AND/OR FIRST LAUNCH OF THE PRODUCT FOR UNLOCKING THE PRODUCT.
+
+6. RESTRICTIONS
+6.1. The User may not, on its own or through third parties:
+6.1.1. Reverse engineer the Product, emulate, develop new versions, modify, decompile, disassemble, decipher and take other actions with the code of the Product aimed at breaching the system protecting the Product from unauthorized use or the receipt of information about the implementation of the algorithms used in the Product.
+6.1.2. Create other software products and/or services using the Product and the databases forming part of it or materials retrieved (retrievable) from them, as well as other Intellectual Property specified in section 3.1 of this Agreement.
+6.1.3. Reproduce and distribute the Product for commercial purposes without the Rightholder’s written consent.
+6.1.4. Use the databases forming part of the Product separately from such Product.
+6.1.5. Afford access to NC Online Services for commercial purposes including through translation of data from them using any methods such as frames and other software-based methods and techniques enabling receipt of data from NC Online Services and their display on third-party websites, unless otherwise provided in a separate agreement with the Rightholder.
+6.1.6. Remove or in any way amend the trademarks, industrial designs and notices of copyrights or any other rights incorporated in the Product.
+6.1.7. The User may not sublicense, lease or rent out or temporarily transfer their rights in respect of the Software, Documentation or the license keys provided under this Agreement without the prior written consent of the Licensor.
+7. PRIVACY POLICY
+7.1. The User is not required to provide personal data for the use of the Product, unless otherwise expressly provided in a separate agreement for the use of the Product.
+7.2. To ensure the functioning of the Product, delivery of software updates and dynamically provided materials, technical product support and other services, including the transmission of data over the Internet, the User agrees that the Licensor and its partners may collect, use, store and transmit diagnostic, technical, background information and information about the use of the Program, including, without limitation, unique identifiers of the system or hardware, information about the computer and equipment, system software and applications, additional devices, about the use of different modules and functionality of the Program, problems in the operation of the Program and/or service providers, which is routinely collected in order to provide and improve the Program, to facilitate the delivery of Program updates, technical support and services related to the Program (if provided). The Licensor may use this information, which does not identify the User, for the purposes described above. The Licensor and its partners may also use these data in aggregate, in a form that makes it impossible to identify you, for the improvement of its products and services and provide anonymous aggregate data to third parties, its service providers.
+
+7.3. The user is hereby made aware and agrees that the Licensor may collect, store, process and use the data and information about the visits, characteristics and actions of the visitors when using the Product, including, among other things, the information about views of the Website sections, specific news, goods and information about their orders, in order to improve the Product experience of the User.
+
+7.4. The procedure for the processing and protection of User information obtained by the Rightholder in connection with the use of the Product by the User shall be determined by the Privacy Policy, subject to the specifics of this Agreement.
+
+7.5. If you use network services (connection to the servers of the Rightholder and third parties, downloading of materials, etc.), the Licensor and its partners may also collect, use, store, transmit and publish statistical data on the use of the Product (including, in particular, the number of viewed materials and user achievements), or identify the materials that you created and made available through publication to other users. Your personal data shall be collected, used, stored and transmitted in conformity with the Confidentiality Rules which are available on the website.
+
+7.6. The Licensor undertakes and warrants that it does not disclose, publish or makes available, nor transfers to any third parties any information making it possible to establish the identity of the User (name, email address, information about telephones, delivery addresses, etc.).
+
+8. LIABILITY
+8.1. The Product is provided “as is”. For this reason the User is not given any warranties that the Product: will meet the requirements of the User; will be provided continuously, promptly, reliably and without errors; the results that may be obtained from its use will be accurate and reliable; all errors will be fixed.
+8.2. The Licensor makes no warranties of any kind, no conditions and no representation, either express or implied by law, custom, practice or otherwise, except that the Product is generally fit for purpose and corresponds to its specifications.
+8.3. The Licensor shall not be liable for the operability of the Product in the event of damage of the user’s data storage media, actions of computer viruses, power interruptions, equipment failure, willful damage or breach of operating guidelines, etc.
+8.4. The Licensor shall not be liable for any loss and/or damage (including loss related to lost profits, interruption of business or operating activities, loss of business information and pecuniary loss) arising from the use of, or inability to use, the Product, even if the Licensor has been advised of the possibility of such loss and/or damage.
+8.5. Since the License grants the right to use the Product for noncommercial purposes free of charge, the relations between the parties to this Agreement shall not be governed by the provisions of the consumer protection laws.
+8.6. The Rightholder shall not be liable for the reliability of third-party information and/or advertising materials, availability of their websites and their content, and for any consequences connected with the use of information and/or advertising, as well as the websites of third parties.
+8.7. The User shall be liable for any breach of the obligations set out in this Agreement and/or the applicable law, as well as for all consequences of such defaults (including any damages that may be incurred by the Rightholder and other third parties).
+8.8. The Rightholder reserves the right to sue the infringers of exclusive rights to Intellectual Property under civil, administrative or criminal law, at its discretion.
+9. FINAL PROVISIONS
+9.1. This Agreement, the procedure for its execution and performance, and the matters that are not covered by this Agreement shall be governed by the applicable laws of the Russian Federation.
+9.2. All disputes arising out of or in connection with this Agreement shall be settled in a court competent for the Rightholder’s place of business in accordance with the applicable laws of the Russian Federation.
+9.3. This Agreement may be amended or terminated by the Rightholder at its own discretion without a prior notice to the User and without payment of any compensation in this connection.
+9.4. The most recent version of this Agreement is posted on the Rightholder’s website and is available online at WWW.NOCOUNTERFEIT.INFO
+In the event of any conflict between the version of the Agreement making part of the distributed copies of the Product and the latest version of the Agreement posted on the Rightholder’s website, the version of the Agreement posted on the Rightholder’s Website shall prevail.
