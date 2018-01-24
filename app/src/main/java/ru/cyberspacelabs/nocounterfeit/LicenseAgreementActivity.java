@@ -36,7 +36,7 @@ public class LicenseAgreementActivity extends ConfigurableActivity {
 	}
 
 	private void loadLicense() {
-		loadTextAsset("license.txt", viewLicenseText);
+		loadTextAsset("license_" + Util.getApplicationLocale(this).toLowerCase() + ".txt", viewLicenseText);
 	}
 
 	private void bindActions() {

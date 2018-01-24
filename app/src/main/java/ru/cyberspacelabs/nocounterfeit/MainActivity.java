@@ -293,7 +293,7 @@ public class MainActivity extends ConfigurableActivity implements LocationListen
 		timestampFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss ZZZ");
 		resolveControls();
 		bindActions();
-		// setTitle(R.string.activity_main_title);
+		setTitle(R.string.activity_main_title);
 		createGeocoder();
 		createMapView();
 		Toolbar myToolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -448,6 +448,12 @@ public class MainActivity extends ConfigurableActivity implements LocationListen
 		case R.id.menu_item_config:
 			startActivity(new Intent(this, ConfigActivity.class));
 			return true;
+		case R.id.menu_item_about:
+			startActivity(new Intent(this, AboutAppActivity.class));
+			return true;
+			/*case  R.id.menu_item_license:
+				startActivity(new Intent (this, LicenseAgreementActivity.class));
+				return true;*/
 		default:
 			return super.onOptionsItemSelected(item);
 		}
