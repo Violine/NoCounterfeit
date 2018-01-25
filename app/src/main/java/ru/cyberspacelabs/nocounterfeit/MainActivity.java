@@ -19,6 +19,8 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -66,6 +68,9 @@ public class MainActivity extends ConfigurableActivity implements LocationListen
 	private LocationManager locationManager;
 	private Gson gson;
 	private SimpleDateFormat timestampFormat;
+
+	private Animation animScale;
+	private Button animButton;
 
 
 	private void resolveControls() {
@@ -298,6 +303,9 @@ public class MainActivity extends ConfigurableActivity implements LocationListen
 		createMapView();
 		Toolbar myToolbar = (Toolbar) findViewById(R.id.toolbar);
 		setSupportActionBar(myToolbar);
+		final Animation animScale = AnimationUtils.loadAnimation(this, R.anim.scale);
+		//animScale.setRepeatCount(Animation.INFINITE);
+		buttonScan.startAnimation(animScale);
 
 		locationStatus.setText(R.string.location_in_progress);
 	}

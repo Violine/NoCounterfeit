@@ -69,8 +69,9 @@
         </activity>
         <activity
             android:name=".ScanResultActivity"
-            android:configChanges="orientation|screenSize"
             android:parentActivityName=".MainActivity"/>
+          <!--  android:configChanges="orientation|screenSize" -->
+
         <activity android:name=".OffGridActivity" />
         <activity android:name=".LicenseAgreementActivity"
             android:theme="@style/BlackTheme">

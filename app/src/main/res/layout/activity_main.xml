@@ -39,10 +39,7 @@
         android:layout_below="@+id/mapView"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="33dp"
-        android:background="@drawable/scanbtn"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:textAlignment="textStart" />
+        android:background="@drawable/scanbtn" />
 
     <TextView
         android:id="@+id/text_location"
