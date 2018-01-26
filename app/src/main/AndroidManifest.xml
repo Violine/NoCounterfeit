@@ -74,7 +74,7 @@
 
         <activity android:name=".OffGridActivity" />
         <activity android:name=".LicenseAgreementActivity"
-            android:theme="@style/BlackTheme">
+            android:theme="@style/OriginalTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -83,11 +83,11 @@
         <activity
             android:name=".ConfigActivity"
             android:configChanges="orientation|screenSize"
-            android:theme="@style/BlackTheme"/>
+            android:theme="@style/OriginalTheme"/>
         <activity android:name=".AboutAppActivity"
-            android:theme="@style/BlackTheme"/>
+            android:theme="@style/OriginalTheme"/>
         <activity android:name=".ServiceLockActivity"
-            android:theme="@style/BlackTheme"/>
+            android:theme="@style/OriginalTheme"/>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
