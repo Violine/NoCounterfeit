@@ -69,8 +69,8 @@ public class MainActivity extends ConfigurableActivity implements LocationListen
 	private Gson gson;
 	private SimpleDateFormat timestampFormat;
 
+	private Animation animAlpha;
 	private Animation animScale;
-	private Button animButton;
 
 
 	private void resolveControls() {
@@ -155,6 +155,7 @@ public class MainActivity extends ConfigurableActivity implements LocationListen
 		buttonScan.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
+				buttonScan.startAnimation(animAlpha);
 				qrCodeValue = "";
 				barCodeValue = "";
 				Intent intent = createScanIntent(getResources().getText(R.string.prompt_locate_protection_field));
@@ -303,9 +304,9 @@ public class MainActivity extends ConfigurableActivity implements LocationListen
 		createMapView();
 		Toolbar myToolbar = (Toolbar) findViewById(R.id.toolbar);
 		setSupportActionBar(myToolbar);
-		final Animation animScale = AnimationUtils.loadAnimation(this, R.anim.scale);
-		//animScale.setRepeatCount(Animation.INFINITE);
-		buttonScan.startAnimation(animScale);
+		// final Animation animScale = AnimationUtils.loadAnimation(this, R.anim.scale);
+		animAlpha = AnimationUtils.loadAnimation(this, R.anim.alpha);
+		// buttonScan.startAnimation(animScale);
 
 		locationStatus.setText(R.string.location_in_progress);
 	}
@@ -400,6 +401,8 @@ public class MainActivity extends ConfigurableActivity implements LocationListen
 	@Override
 	protected void onResume() {
 		super.onResume();
+		final Animation animScale = AnimationUtils.loadAnimation(this, R.anim.scale);
+		buttonScan.startAnimation(animScale);
 		if (!Util.isConnectivityEnabled(this) || !Util.isLocationEnabled(locationManager)) {
 			startActivity(new Intent(this, OffGridActivity.class));
 		}
