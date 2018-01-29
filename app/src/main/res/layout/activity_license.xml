@@ -16,7 +16,7 @@
         android:layout_above="@+id/checkBoxAcceptToS"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/dropdownLanguage">
+        android:layout_below="@+id/languageOK">
 
         <EditText
             android:id="@+id/textLicense"
