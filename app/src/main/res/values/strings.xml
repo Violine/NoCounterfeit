@@ -202,6 +202,6 @@
         <item>Black</item>
         <item>Light</item>
     </string-array>
-    <string name="languagedasf">Язык</string>
+    <string name="language">Язык</string>
 
 </resources>
