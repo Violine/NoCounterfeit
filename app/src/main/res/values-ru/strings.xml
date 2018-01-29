@@ -203,4 +203,5 @@
     <item>Светлая</item>
   </string-array>
     <string name="you_here_string">Вы здесь!</string>
+  <string name="languagedasf">Language</string>
 </resources>

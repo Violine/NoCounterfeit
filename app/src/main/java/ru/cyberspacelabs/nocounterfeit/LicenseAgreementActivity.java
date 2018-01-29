@@ -12,6 +12,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.IOException;
@@ -26,6 +27,8 @@ public class LicenseAgreementActivity extends ConfigurableActivity {
 	private Button buttonContinue;
 	private EditText viewLicenseText;
 	private Spinner dropdownLanguages;
+	private Button buttonLanguage;
+	private TextView languageText;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -68,6 +71,12 @@ public class LicenseAgreementActivity extends ConfigurableActivity {
 				}
 			}
 		});
+		buttonLanguage.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				restartActivitiy();
+			}
+		});
 	}
 
 	private void writeAgreementFlag() {
@@ -83,6 +92,8 @@ public class LicenseAgreementActivity extends ConfigurableActivity {
 		checkBoxAccept = (CheckBox) findViewById(R.id.checkBoxAcceptToS);
 		buttonContinue = (Button) findViewById(R.id.buttonAcceptToS);
 		viewLicenseText = (EditText) findViewById(R.id.textLicense);
+		buttonLanguage = (Button) findViewById(R.id.languageOK);
+		languageText = (TextView) findViewById(R.id.language);
 	}
 
 	public void restartActivitiy() {
@@ -119,14 +130,13 @@ public class LicenseAgreementActivity extends ConfigurableActivity {
 			}
 		});*/
 
-		/*OnItemSelectedListener itemSelectedListener = new OnItemSelectedListener() {
+		OnItemSelectedListener itemSelectedListener = new OnItemSelectedListener() {
 			@Override
 			public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
 				editor.putString(Util.PREFERENCE_KEY_LOCALE,
 						dropdownLanguages.getSelectedItemPosition() == 0 ? "en_US" : "ru_RU");
 				editor.commit();
-                loadLicense();
 			}
 
 			@Override
@@ -134,7 +144,7 @@ public class LicenseAgreementActivity extends ConfigurableActivity {
 
 			}
 		};
-		dropdownLanguages.setOnItemSelectedListener(itemSelectedListener);*/
+		dropdownLanguages.setOnItemSelectedListener(itemSelectedListener);
 		if (!isExitPending()) {
 			if (checkBoxAccept.isChecked() && !locale.isEmpty()) {
 				startActivity(new Intent(LicenseAgreementActivity.this, OffGridActivity.class));
