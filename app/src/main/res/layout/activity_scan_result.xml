@@ -71,14 +71,15 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textSize="40dp"
             android:visibility="gone"/>
+
         <ImageView
+            android:id="@+id/imageCounterfeitAccent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/accent"
             android:layout_marginTop="10dp"
             android:scaleType="fitCenter"
-            android:visibility="gone"
-            android:id="@+id/imageCounterfeitAccent"/>
+            android:src="@drawable/accent"
+            android:visibility="gone" />
         <com.google.android.gms.maps.MapView
             android:id="@+id/map"
             android:layout_width="match_parent"

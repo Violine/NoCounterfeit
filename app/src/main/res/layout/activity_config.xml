@@ -8,117 +8,124 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="ru.cyberspacelabs.nocounterfeit.ConfigActivity">
+
     <ScrollView
+        android:id="@+id/scrollSettings"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_above="@+id/buttonSaveSettings"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
         android:layout_alignParentRight="true"
-        android:id="@+id/scrollSettings"
-        android:layout_above="@+id/buttonSaveSettings">
+        android:layout_alignParentStart="true">
+
         <RelativeLayout
             android:id="@+id/layoutSettings"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
                 android:id="@+id/labelIDText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:text="@string/label_device_id"/>
+                android:text="@string/label_device_id"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceSmall"
                 android:id="@+id/labelDeviceID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
                 android:layout_below="@+id/labelIDText"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"/>
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/label_seting_language"
                 android:id="@+id/labelLanguage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
                 android:layout_below="@+id/labelDeviceID"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
+                android:text="@string/label_seting_language"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
             <Spinner
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:id="@+id/dropdownLanguage"
-                android:layout_below="@+id/labelLanguage"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:entries="@array/languages"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/label_setting_geocoding"
-                android:id="@+id/labelGeocoding"
-                android:layout_below="@+id/dropdownLanguage"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_marginTop="41dp"
-                android:visibility="gone"/>
-
-            <Spinner
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/dropdownGeocoding"
-                android:layout_below="@+id/labelGeocoding"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
-                android:entries="@array/geocoding_services"
-                android:visibility="gone"/>
+                android:layout_below="@+id/labelLanguage"
+                android:entries="@array/languages" />
 
             <TextView
+                android:id="@+id/labelGeocoding"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/label_setting_theme"
-                android:id="@+id/labelThemes"
-                android:layout_below="@+id/dropdownGeocoding"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
-                android:layout_marginTop="49dp"
+                android:layout_below="@+id/dropdownLanguage"
+                android:layout_marginTop="41dp"
+                android:text="@string/label_setting_geocoding"
+                android:textAppearance="?android:attr/textAppearanceMedium"
                 android:visibility="gone" />
 
             <Spinner
+                android:id="@+id/dropdownGeocoding"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/dropdownThemes"
-                android:layout_below="@+id/labelThemes"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
+                android:layout_below="@+id/labelGeocoding"
+                android:entries="@array/geocoding_services"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/labelThemes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/dropdownGeocoding"
+                android:layout_marginTop="49dp"
+                android:text="@string/label_setting_theme"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:visibility="gone" />
+
+            <Spinner
+                android:id="@+id/dropdownThemes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/labelThemes"
                 android:entries="@array/themes"
                 android:visibility="gone" />
 
             <Button
+                android:id="@+id/buttonAbout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/activity_about"
-                android:id="@+id/buttonAbout"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentRight="true"
                 android:layout_below="@+id/dropdownGeocoding"
-                android:layout_marginTop="40dp"/>
+                android:layout_marginTop="40dp"
+                android:text="@string/activity_about" />
         </RelativeLayout>
     </ScrollView>
+
     <Button
+        android:id="@+id/buttonSaveSettings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/label_save"
-        android:id="@+id/buttonSaveSettings"
         android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentStart="true"
+        android:text="@string/label_save" />
 
 </RelativeLayout>

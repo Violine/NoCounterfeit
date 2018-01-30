@@ -13,11 +13,14 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -66,6 +69,9 @@ public class MainActivity extends ConfigurableActivity implements LocationListen
 	private Gson gson;
 	private SimpleDateFormat timestampFormat;
 
+	private Animation animAlpha;
+	private Animation animScale;
+
 
 	private void resolveControls() {
 		buttonScan = (Button) findViewById(R.id.button_scan);
@@ -109,7 +115,7 @@ public class MainActivity extends ConfigurableActivity implements LocationListen
 						if(null != googleMap) {
 							googleMap.addMarker(new MarkerOptions()
 									.position(new LatLng(latitude, longitude))
-									.title("Marker")
+									.title(getResources().getString(R.string.you_here_string))
 									.draggable(true)
 							);
 						}
@@ -122,22 +128,6 @@ public class MainActivity extends ConfigurableActivity implements LocationListen
 			}
 		} catch (NullPointerException exception){
 			Log.e("mapApp", exception.toString());
-		}
-	}
-
-	/**
-	 * Adds a marker to the map
-	 */
-
-	private void addMarker(){
-
-		/** Make sure that the map has been initialised **/
-		if(null != googleMap){
-			googleMap.addMarker(new MarkerOptions()
-					.position(new LatLng(0, 0))
-					.title("Marker")
-					.draggable(true)
-			);
 		}
 	}
 
@@ -165,6 +155,7 @@ public class MainActivity extends ConfigurableActivity implements LocationListen
 		buttonScan.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
+				buttonScan.startAnimation(animAlpha);
 				qrCodeValue = "";
 				barCodeValue = "";
 				Intent intent = createScanIntent(getResources().getText(R.string.prompt_locate_protection_field));
@@ -310,9 +301,12 @@ public class MainActivity extends ConfigurableActivity implements LocationListen
 		bindActions();
 		setTitle(R.string.activity_main_title);
 		createGeocoder();
-
 		createMapView();
-		//addMarker();
+		Toolbar myToolbar = (Toolbar) findViewById(R.id.toolbar);
+		setSupportActionBar(myToolbar);
+		// final Animation animScale = AnimationUtils.loadAnimation(this, R.anim.scale);
+		animAlpha = AnimationUtils.loadAnimation(this, R.anim.alpha);
+		// buttonScan.startAnimation(animScale);
 
 		locationStatus.setText(R.string.location_in_progress);
 	}
@@ -407,6 +401,8 @@ public class MainActivity extends ConfigurableActivity implements LocationListen
 	@Override
 	protected void onResume() {
 		super.onResume();
+		final Animation animScale = AnimationUtils.loadAnimation(this, R.anim.scale);
+		buttonScan.startAnimation(animScale);
 		if (!Util.isConnectivityEnabled(this) || !Util.isLocationEnabled(locationManager)) {
 			startActivity(new Intent(this, OffGridActivity.class));
 		}
@@ -452,8 +448,7 @@ public class MainActivity extends ConfigurableActivity implements LocationListen
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		MenuInflater inflater = getMenuInflater();
-		inflater.inflate(R.menu.default_menu, menu);
+		getMenuInflater().inflate(R.menu.default_menu, menu);
 		return true;
 	}
 
@@ -464,6 +459,12 @@ public class MainActivity extends ConfigurableActivity implements LocationListen
 		case R.id.menu_item_config:
 			startActivity(new Intent(this, ConfigActivity.class));
 			return true;
+		case R.id.menu_item_about:
+			startActivity(new Intent(this, AboutAppActivity.class));
+			return true;
+			/*case  R.id.menu_item_license:
+				startActivity(new Intent (this, LicenseAgreementActivity.class));
+				return true;*/
 		default:
 			return super.onOptionsItemSelected(item);
 		}

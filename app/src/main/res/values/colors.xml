@@ -28,5 +28,8 @@
   <color name="viewfinder_mask">#60000000</color>
   <color name="originalThemeBackground">#00695C</color>
   <color name="label_legal">#227f7f</color>
-  <color name="background_not_activated">#FFBD22</color>
+  <color name="background_not_activated">#41cb68</color>
+  <color name="primary">#259b24</color>
+  <color name="primary_dark">#0a7e07</color>
+  <color name="accent">#40c4ff</color>
 </resources>

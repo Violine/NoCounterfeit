@@ -1,11 +1,22 @@
 package ru.cyberspacelabs.nocounterfeit;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.Spinner;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemSelectedListener;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ArrayAdapter;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -18,6 +29,9 @@ public class LicenseAgreementActivity extends ConfigurableActivity {
 	private CheckBox checkBoxAccept;
 	private Button buttonContinue;
 	private EditText viewLicenseText;
+	private Spinner dropdownLanguages;
+	private Button buttonLanguage;
+	private TextView languageText;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +50,7 @@ public class LicenseAgreementActivity extends ConfigurableActivity {
 	}
 
 	private void loadLicense() {
-		loadTextAsset("license.txt", viewLicenseText);
+		loadTextAsset("license_" + Util.getApplicationLocale(this).toLowerCase() + ".txt", viewLicenseText);
 	}
 
 	private void bindActions() {
@@ -60,6 +74,12 @@ public class LicenseAgreementActivity extends ConfigurableActivity {
 				}
 			}
 		});
+		buttonLanguage.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				restartActivitiy();
+			}
+		});
 	}
 
 	private void writeAgreementFlag() {
@@ -75,6 +95,36 @@ public class LicenseAgreementActivity extends ConfigurableActivity {
 		checkBoxAccept = (CheckBox) findViewById(R.id.checkBoxAcceptToS);
 		buttonContinue = (Button) findViewById(R.id.buttonAcceptToS);
 		viewLicenseText = (EditText) findViewById(R.id.textLicense);
+		buttonLanguage = (Button) findViewById(R.id.languageOK);
+		languageText = (TextView) findViewById(R.id.language);
+		languageText.setText(getResources().getString(R.string.language));
+		dropdownLanguages = (Spinner) findViewById(R.id.dropdownLanguage);
+	}
+
+	private void loadState() {
+		String localeId = getSharedPreferences(getPackageName(), MODE_PRIVATE).getString(Util.PREFERENCE_KEY_LOCALE,
+				"en_US");
+		dropdownLanguages.setSelection(localeId.equals("en_US") ? 0 : 1);
+		if (ActivityCompat.checkSelfPermission(this,
+				Manifest.permission.READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED
+				&& ActivityCompat.checkSelfPermission(this,
+				Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+			Util.openRuntimeSettings(this, getResources().getString(R.string.toast_runtime_settings));
+			return;
+		}
+	}
+
+	private void saveState() {
+		SharedPreferences.Editor editor = getSharedPreferences(getPackageName(), MODE_PRIVATE).edit();
+		editor.putString(Util.PREFERENCE_KEY_LOCALE,
+				dropdownLanguages.getSelectedItemPosition() == 0 ? "en_US" : "ru_RU");
+		editor.commit();
+	}
+
+	public void restartActivitiy() {
+		saveState();
+		LicenseAgreementActivity.this.finish();
+		Util.restartApplication(LicenseAgreementActivity.this);
 	}
 
 	@Override
@@ -82,6 +132,8 @@ public class LicenseAgreementActivity extends ConfigurableActivity {
 		super.onResume();
 		restoreState();
 		toggleButtonState();
+		loadState();
+
 		String locale = getSharedPreferences(getPackageName(), MODE_PRIVATE).getString(Util.PREFERENCE_KEY_LOCALE, "");
 		if (!isExitPending()) {
 			if (checkBoxAccept.isChecked() && !locale.isEmpty()) {
@@ -94,4 +146,5 @@ public class LicenseAgreementActivity extends ConfigurableActivity {
 			finish();
 		}
 	}
+
 }

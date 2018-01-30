@@ -138,7 +138,6 @@
   <string name="result_text">Найден текст</string>
   <string name="result_uri">Найден URL</string>
   <string name="result_wifi">Найдена конфигурация сети</string>
-  <string name="sbc_name">Поиск книг Google</string>
   <string name="wifi_changing_network">Запрос подключения к сети\u2026</string>
   <!-- our own-->
   <string name="button_scan">Сканировать</string>
@@ -186,6 +185,8 @@
   <string name="label_registered_location">Место легальной реализации</string>
   <string name="error_qr_failed">Не удалось распознать QR-код</string>
   <string name="error_barcode_failed">Не удалось распознать штрих-код</string>
+  <string name="you_here_string">Вы здесь!</string>
+  <string name="language">Язык</string>
 
   <string-array name="languages">
     <item>English</item>

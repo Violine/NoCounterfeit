@@ -39,7 +39,7 @@
         android:required="false" />
     <!-- This excludes Google TV, which is unfortunately included by virtue of not requiring a camera -->
     <uses-feature android:name="android.hardware.touchscreen" />
-
+ 
     <supports-screens
         android:anyDensity="true"
         android:largeScreens="true"
@@ -52,10 +52,9 @@
         android:icon="@drawable/nc"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/BlackTheme"
+        android:theme="@style/LightTheme"
         android:name=".ApplicationState">
-        <activity android:name=".MainActivity" android:launchMode="singleTop"
-            android:theme="@style/CaptureTheme" />
+        <activity android:name=".MainActivity" android:launchMode="singleTop" />
         <activity
             android:name="com.google.zxing.client.android.CaptureActivity"
             android:configChanges="orientation|keyboardHidden"
@@ -69,8 +68,9 @@
         </activity>
         <activity
             android:name=".ScanResultActivity"
-            android:configChanges="orientation|screenSize"
             android:parentActivityName=".MainActivity"/>
+          <!--  android:configChanges="orientation|screenSize" -->
+
         <activity android:name=".OffGridActivity" />
         <activity android:name=".LicenseAgreementActivity">
             <intent-filter>
@@ -80,9 +80,9 @@
         </activity>
         <activity
             android:name=".ConfigActivity"
-            android:configChanges="orientation|screenSize" />
+            android:configChanges="orientation|screenSize"/>
         <activity android:name=".AboutAppActivity" />
-        <activity android:name=".ServiceLockActivity"/>
+           <!-- android:theme="@style/OriginalTheme" -->
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -99,6 +99,5 @@
          <meta-data
              android:name="com.google.android.maps.v2.API_KEY"
              android:value="AIzaSyCH5B0cwAou_xh9aQvY-vJ67fR1n6FTCS4" />
-
      </application>
  </manifest>

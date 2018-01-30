@@ -185,6 +185,8 @@
     <string name="label_registered_location">Registered point of sale address</string>
     <string name="error_qr_failed">Failed to scan QR code</string>
     <string name="error_barcode_failed">Failed to scan barcode</string>
+    <string name="you_here_string">You here!</string>
+    <string name="language">Language</string>
 
     <string-array name="languages">
         <item>English</item>
@@ -201,4 +203,5 @@
         <item>Black</item>
         <item>Light</item>
     </string-array>
+
 </resources>
