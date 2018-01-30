@@ -70,7 +70,7 @@ public class LicenseAgreementActivity extends ConfigurableActivity {
 				if (checkBoxAccept.isChecked() && !locale.isEmpty()) {
 					startActivity(new Intent(LicenseAgreementActivity.this, OffGridActivity.class));
 				} else if (checkBoxAccept.isChecked() && locale.isEmpty()) {
-					startActivity(new Intent(LicenseAgreementActivity.this, ConfigActivity.class));
+					startActivity(new Intent(LicenseAgreementActivity.this, MainActivity.class));
 				}
 			}
 		});
