@@ -3,14 +3,13 @@
 
     <style name="OriginalTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">#259b24</item>
-        <item name="colorPrimaryDark">#0a7e07</item>
-        <item name="colorAccent">#F48f91</item>
-        <item name="android:textColor">#FFFFFF</item>
-        <item name="android:windowBackground">@android:color/holo_green_light</item>
-        <item name="android:colorBackground">@android:color/holo_purple</item>
-        <item name="android:colorButtonNormal">#EC407a</item>
-        <item name="colorButtonNormal">#EC407a</item>
-        <item name="android:textColorSecondary">#FFFFFF</item>
+        <item name="android:buttonStyle">@style/AlexButton</item>
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryDark">@color/primaryDarkColor</item>
+        <item name="colorAccent">#ffd740</item>
+        <item name="android:windowBackground">@color/background_not_activated</item>
+        <item name="android:colorBackground">@android:color/holo_red_light</item>
+        <item name="android:textColorPrimary">#ffffff</item>
+        <item name="android:textColorSecondary">#ffffff</item>
     </style>
 </resources>

@@ -4,6 +4,7 @@ import android.Manifest;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
@@ -435,7 +436,8 @@ public class MainActivity extends ConfigurableActivity implements LocationListen
 	public void onBackPressed() {
 		new AlertDialog.Builder(this).setIcon(android.R.drawable.ic_dialog_alert)
 				.setTitle(R.string.label_dialog_close_title).setMessage(R.string.label_dialog_close_text)
-				.setPositiveButton(R.string.label_dialog_close_yes, new DialogInterface.OnClickListener() {
+				.setPositiveButton(R.string.label_dialog_close_yes, new DialogInterface.OnClickListener()
+				{
 					@Override
 					public void onClick(DialogInterface dialog, int which) {
 						setExitPending(true);
