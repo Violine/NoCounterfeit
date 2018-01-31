@@ -29,6 +29,7 @@
             android:layout_alignParentTop="true"
             android:ems="10"
             android:focusable="false"
-            android:inputType="textMultiLine" />
+            android:inputType="textMultiLine"
+            android:textColor="@color/common_plus_signin_btn_text_light_focused" />
     </ScrollView>
 </RelativeLayout>

@@ -18,7 +18,7 @@
   <color name="contents_text">#ff000000</color>
   <color name="encode_view">#ffffffff</color>
   <color name="possible_result_points">#c0ffbd21</color> <!-- Android standard ICS color -->
-  <color name="result_minor_text">#ffc0c0c0</color>
+  <color name="result_minor_text">#6e6e6e</color>
   <color name="result_points">#c099cc00</color> <!-- Android standard ICS color -->
   <color name="result_text">#ffffffff</color>
   <color name="result_view">#b0000000</color>
@@ -27,7 +27,7 @@
   <color name="viewfinder_laser">#ffcc0000</color> <!-- Android standard ICS color -->
   <color name="viewfinder_mask">#60000000</color>
   <color name="originalThemeBackground">#00695C</color>
-  <color name="label_legal">#227f7f</color>
+  <color name="label_legal">#1e35e6</color>
   <color name="background_not_activated">#ff6c6f</color>
   <color name="primary">#259b24</color>
   <color name="primary_dark">#0a7e07</color>
@@ -36,4 +36,5 @@
   <color name="primaryLightColor">#ff6434</color>
   <color name="primaryDarkColor">#a30000</color>
   <color name="primaryTextColor">#ffffff</color>
+  <color name="background_material_light">#ffd77a</color>
 </resources>

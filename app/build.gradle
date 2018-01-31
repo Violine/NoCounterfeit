@@ -17,6 +17,7 @@ android {
         versionCode 64
         versionName "1.5.64"
         multiDexEnabled true
+        vectorDrawables.useSupportLibrary = true
     }
 
     signingConfigs {

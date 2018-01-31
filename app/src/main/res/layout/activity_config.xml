@@ -31,7 +31,8 @@
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:text="@string/label_device_id"
-                android:textAppearance="?android:attr/textAppearanceMedium" />
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/common_plus_signin_btn_text_light_default" />
 
             <TextView
                 android:id="@+id/labelDeviceID"
@@ -40,7 +41,8 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/labelIDText"
-                android:textAppearance="?android:attr/textAppearanceSmall" />
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/common_plus_signin_btn_text_light_default" />
 
             <TextView
                 android:id="@+id/labelLanguage"
@@ -50,7 +52,8 @@
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/labelDeviceID"
                 android:text="@string/label_seting_language"
-                android:textAppearance="?android:attr/textAppearanceMedium" />
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/common_plus_signin_btn_text_light_default" />
 
             <Spinner
                 android:id="@+id/dropdownLanguage"
@@ -59,7 +62,8 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/labelLanguage"
-                android:entries="@array/languages" />
+                android:entries="@array/languages"
+                android:padding="3dp" />
 
             <TextView
                 android:id="@+id/labelGeocoding"
@@ -113,7 +117,8 @@
                 android:layout_alignParentRight="true"
                 android:layout_below="@+id/dropdownGeocoding"
                 android:layout_marginTop="40dp"
-                android:text="@string/activity_about" />
+                android:text="@string/activity_about"
+                android:visibility="invisible" />
         </RelativeLayout>
     </ScrollView>
 
@@ -126,6 +131,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentStart="true"
-        android:text="@string/label_save" />
+        android:text="@string/label_save"
+        android:textColor="@color/common_plus_signin_btn_text_dark_default" />
 
 </RelativeLayout>

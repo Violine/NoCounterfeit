@@ -65,11 +65,11 @@
         android:id="@+id/text_location"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/mapView"
         android:layout_alignTop="@+id/mapView"
         android:layout_toEndOf="@+id/imageLocation"
         android:layout_weight="0"
         android:inputType="textMultiLine"
-        android:maxWidth="300dp"
         android:padding="3dp"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:textColor="@color/common_plus_signin_btn_text_light_default" />

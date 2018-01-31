@@ -10,7 +10,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
-
+import android.widget.ArrayAdapter;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemSelectedListener;
+import android.graphics.Color;
 import ru.cyberspacelabs.nocounterfeit.ui.ConfigurableActivity;
 import ru.cyberspacelabs.nocounterfeit.util.Util;
 
@@ -55,6 +58,29 @@ public class ConfigActivity extends ConfigurableActivity {
 		buttonAbout = (Button) findViewById(R.id.buttonAbout);
 		buttonSave = (Button) findViewById(R.id.buttonSaveSettings);
 		textDeviceId = (TextView) findViewById(R.id.labelDeviceID);
+		ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
+
+				this, R.array.languages, R.layout.simple_spinner_item);
+
+		adapter.setDropDownViewResource(R.layout.simple_spinner_dropdown_item);
+		dropdownLanguages.setAdapter(adapter);
+
+		dropdownLanguages.setOnItemSelectedListener(new OnItemSelectedListener() {
+
+			@Override
+			public void onItemSelected(AdapterView<?> parent, View view, int pos,
+									   long id) {
+				// TODO Auto-generated method stub
+				((TextView) parent.getChildAt(0)).setTextColor(Color.BLACK);
+				((TextView) parent.getChildAt(0)).setTextSize(16);
+			}
+
+			@Override
+			public void onNothingSelected(AdapterView<?> arg0) {
+				// TODO Auto-generated method stub
+
+			}
+		});
 	}
 
 	@Override
