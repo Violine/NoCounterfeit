@@ -68,9 +68,7 @@
         </activity>
         <activity
             android:name=".ScanResultActivity"
-            android:parentActivityName=".MainActivity"/>
-          <!--  android:configChanges="orientation|screenSize" -->
-
+            android:parentActivityName=".MainActivity"  android:configChanges="keyboardHidden|orientation|screenSize"/>
         <activity android:name=".OffGridActivity" />
         <activity android:name=".LicenseAgreementActivity">
             <intent-filter>
