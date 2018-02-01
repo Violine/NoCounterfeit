@@ -122,12 +122,12 @@ public class LicenseAgreementActivity extends ConfigurableActivity {
 
 			}
 		});
-		dropdownLanguages.setSelection(2);
+
 	}
 
 	private void loadState() {
 		String localeId = getSharedPreferences(getPackageName(), MODE_PRIVATE).getString(Util.PREFERENCE_KEY_LOCALE,
-				"en_US");
+				"ru_RU");
 		dropdownLanguages.setSelection(localeId.equals("en_US") ? 0 : 1);
 		if (ActivityCompat.checkSelfPermission(this,
 				Manifest.permission.READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED
