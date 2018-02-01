@@ -4,6 +4,7 @@ import android.Manifest;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.view.View;
@@ -99,6 +100,29 @@ public class LicenseAgreementActivity extends ConfigurableActivity {
 		languageText = (TextView) findViewById(R.id.language);
 		languageText.setText(getResources().getString(R.string.language));
 		dropdownLanguages = (Spinner) findViewById(R.id.dropdownLanguage);
+		ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
+
+				this, R.array.languages, R.layout.simple_spinner_item);
+
+		adapter.setDropDownViewResource(R.layout.simple_spinner_dropdown_item);
+		dropdownLanguages.setAdapter(adapter);
+		dropdownLanguages.setOnItemSelectedListener(new OnItemSelectedListener() {
+
+			@Override
+			public void onItemSelected(AdapterView<?> parent, View view, int pos,
+									   long id) {
+				// TODO Auto-generated method stub
+				((TextView) parent.getChildAt(0)).setTextColor(Color.BLACK);
+				((TextView) parent.getChildAt(0)).setTextSize(16);
+			}
+
+			@Override
+			public void onNothingSelected(AdapterView<?> arg0) {
+				// TODO Auto-generated method stub
+
+			}
+		});
+		dropdownLanguages.setSelection(2);
 	}
 
 	private void loadState() {
