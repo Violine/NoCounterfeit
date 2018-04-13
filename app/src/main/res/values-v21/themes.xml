@@ -3,7 +3,7 @@
 
     <style name="OriginalTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="android:buttonStyle">@style/AlexButton</item>
+        <!--<item name="android:buttonStyle">@style/AlexButton</item>-->
         <item name="colorPrimary">@color/primaryColor</item>
         <item name="colorPrimaryDark">@color/primaryDarkColor</item>
         <item name="colorAccent">#ffd740</item>

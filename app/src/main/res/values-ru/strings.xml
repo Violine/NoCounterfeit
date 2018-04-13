@@ -203,4 +203,5 @@
     <item>Темная</item>
     <item>Светлая</item>
   </string-array>
+    <string name="scanbuttonText">Сканировать</string>
 </resources>

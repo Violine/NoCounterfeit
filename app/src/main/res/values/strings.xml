@@ -203,5 +203,6 @@
         <item>Black</item>
         <item>Light</item>
     </string-array>
+    <string name="scanbuttonText">Scan</string>
 
 </resources>
