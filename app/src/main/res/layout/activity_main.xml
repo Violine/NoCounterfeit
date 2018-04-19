@@ -7,7 +7,6 @@
     android:layout_margin="0dp"
     android:layout_marginTop="0dp"
     android:visibility="visible"
-    android:background="@drawable/background"
     tools:context="ru.cyberspacelabs.nocounterfeit.MainActivity">
 
 
@@ -29,11 +28,11 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="53dp"
         android:background="@drawable/scanbtn"
-        android:text="@string/scanbuttonText"
         android:elegantTextHeight="true"
-        android:textSize="15dp"
+        android:text="@string/scanbuttonText"
         android:textAlignment="center"
-        android:textColor="#FFFF"/>
+        android:textColor="#FFFF"
+        android:textSize="15dp"/>
 
     <TextView
         android:id="@+id/text_location"
@@ -60,7 +59,14 @@
         android:layout_height="60dp"
         android:layout_alignParentTop="true"
         android:background="#BC63DC"
-        android:elevation="8dp"
+        android:elevation="8dp" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mapView"
+        android:background="@drawable/background"
         />
 
 

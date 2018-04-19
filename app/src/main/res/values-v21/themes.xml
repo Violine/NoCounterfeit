@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="OriginalTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="OriginalTheme" parent="Theme.AppCompat.NoActionBar">
         <!-- Customize your theme here. -->
         <!--<item name="android:buttonStyle">@style/AlexButton</item>-->
         <item name="colorPrimary">@color/primaryColor</item>
         <item name="colorPrimaryDark">@color/primaryDarkColor</item>
         <item name="colorAccent">#ffd740</item>
-        <item name="android:windowBackground">@drawable/nocounterfeithbackground</item>
+        <!--<item name="android:windowBackground">@drawable/nocounterfeithbackground</item>-->
         <item name="android:textColorPrimary">#ffffff</item>
         <item name="android:textColorSecondary">#ffffff</item>
-        <item name="android:colorBackground">#ff6434</item>
+        <item name="android:colorBackground">@color/primaryLightColor</item>
     </style>
 </resources>

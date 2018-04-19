@@ -119,12 +119,22 @@ public class ScanResultActivity extends ConfigurableActivity implements Protecti
 
 	private void resolveControls() {
 		viewLabelShopAddress = (TextView) findViewById(R.id.labelRegisteredShop);
+        viewLabelShopAddress.setTypeface(SingletonFonts.getInstance(this).getBoldFont());
+
 		viewDescription = (TextView) findViewById(R.id.textDescription);
+        viewDescription.setTypeface(SingletonFonts.getInstance(this).getNormalFont());
+
 		viewStatus = (TextView) findViewById(R.id.textStatus);
+		viewStatus.setTypeface(SingletonFonts.getInstance(this).getBoldFont());
+
 		containerStatus = (LinearLayout) findViewById(R.id.containerValidationResult);
 		progressBarValidation = (ProgressBar) findViewById(R.id.progressBarCodeValidation);
 		viewLocation = (TextView) findViewById(R.id.textShopLocation);
+        viewLocation.setTypeface(SingletonFonts.getInstance(this).getNormalFont());
+
 		viewCounterfeitLabel = (TextView) findViewById(R.id.textLabelCounterfeit);
+        viewCounterfeitLabel.setTypeface(SingletonFonts.getInstance(this).getNormalFont());
+
 		imageAccent = (ImageView) findViewById(R.id.imageCounterfeitAccent);
 		map = mapView.getMap();
 		map.getUiSettings().setMyLocationButtonEnabled(true);
@@ -193,7 +203,6 @@ public class ScanResultActivity extends ConfigurableActivity implements Protecti
 								// ... and attract attention
 								viewStatus.setText(R.string.status_ok);
 								viewStatus.setTextColor(getResources().getColor(R.color.label_legal));
-								viewStatus.setBackgroundColor(Color.WHITE);
 								viewDescription.setText(protectionRegistration.getProductName() + "\r\n"
 										+ getResources().getString(R.string.label_validation_expiration) + " "
 										+ outDateFormat.format(protectionRegistration.getExpired()));

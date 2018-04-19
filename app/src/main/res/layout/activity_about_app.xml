@@ -30,6 +30,6 @@
             android:ems="10"
             android:focusable="false"
             android:inputType="textMultiLine"
-            android:textColor="@color/common_plus_signin_btn_text_light_focused" />
+            android:textColor="@color/primaryColor" />
     </ScrollView>
 </RelativeLayout>

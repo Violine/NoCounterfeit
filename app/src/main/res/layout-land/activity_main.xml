@@ -58,8 +58,9 @@
         android:layout_marginEnd="0dp"
         android:layout_marginRight="0dp"
         android:layout_weight="1"
-        android:background="?attr/colorPrimary"
-        android:theme="?attr/actionBarTheme" />
+        android:background="#BC63DC"
+        android:elevation="8dp"
+      />
 
     <TextView
         android:id="@+id/text_location"
@@ -82,8 +83,8 @@
 
         <Button
             android:id="@+id/button_scan"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="150dp"
+            android:layout_height="170dp"
             android:layout_alignParentEnd="false"
             android:layout_alignWithParentIfMissing="false"
             android:layout_below="@+id/toolbar"
@@ -92,6 +93,7 @@
             android:layout_marginLeft="0dp"
             android:layout_marginStart="0dp"
             android:layout_weight="0"
+            android:text="@string/scanbuttonText"
             android:background="@drawable/scanbtn"
             android:duplicateParentState="false"
             android:editable="false"

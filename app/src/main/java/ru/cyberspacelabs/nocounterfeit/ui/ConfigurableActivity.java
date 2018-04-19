@@ -47,7 +47,7 @@ public class ConfigurableActivity extends AppCompatActivity {
 			}
 		}
 
-		switch (themeId) {
+		/*switch (themeId) {
 		case 0:
 			setTheme(R.style.OriginalTheme);
 			getApplicationContext().setTheme(R.style.OriginalTheme);
@@ -64,7 +64,7 @@ public class ConfigurableActivity extends AppCompatActivity {
 			setTheme(R.style.OriginalTheme);
 			getApplicationContext().setTheme(R.style.OriginalTheme);
 			break;
-		}
+		}*/
 
 	}
 

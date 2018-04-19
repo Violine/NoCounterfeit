@@ -1,31 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_weight="100"
+    android:orientation="vertical"
     tools:context="ru.cyberspacelabs.nocounterfeit.ScanResultActivity">
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="33"
+        android:src="@drawable/validation_ok_background"
+        android:scaleType="centerCrop" />
     <LinearLayout
         android:id="@+id/containerValidationResult"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/progressBarCodeValidation"
-        android:layout_marginLeft="0dp"
-        android:layout_marginRight="0dp"
-        android:layout_marginTop="0dp"
+        android:layout_weight="33"
+        android:background="#e4d905"
         android:orientation="vertical">
 
         <ProgressBar
             android:id="@+id/progressBarCodeValidation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
             android:clickable="false"
             android:focusable="false"
             android:indeterminate="true"
@@ -49,7 +48,6 @@
             android:layout_height="wrap_content"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textColor="@color/common_plus_signin_btn_text_light_focused"
             android:textSize="42dp"
             android:textStyle="bold" />
 
@@ -60,34 +58,37 @@
             android:paddingLeft="@dimen/activity_horizontal_margin"
             android:paddingRight="@dimen/activity_horizontal_margin"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textColor="@color/common_plus_signin_btn_text_light_focused"
+            android:textColor="#000000"
             android:textSize="20sp" />
 
         <TextView
             android:id="@+id/labelRegisteredShop"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingLeft="15sp"
-            android:paddingTop="15sp"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
             android:text="@string/label_registered_location"
-            android:textSize="15sp" />
+            android:textAlignment="center"
+            android:textSize="21sp"
+            android:textColor="@color/label_legal"/>
 
         <TextView
             android:id="@+id/textShopLocation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="5dp"
             android:paddingLeft="@dimen/activity_horizontal_margin"
             android:paddingRight="@dimen/activity_horizontal_margin"
-            android:textSize="20sp" />
-
+            android:textColor="#000000"
+            android:textSize="20dp" />
+    </LinearLayout>
         <com.google.android.gms.maps.MapView
             android:id="@+id/map"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
+            android:layout_height="match_parent"
+            android:layout_weight="33">
         </com.google.android.gms.maps.MapView>
-    </LinearLayout>
+
 
     <ImageView
         android:id="@+id/imageCounterfeitAccent"
@@ -99,4 +100,4 @@
         android:scaleType="fitCenter"
         android:src="@drawable/accent"
         android:visibility="gone" />
-</RelativeLayout>
+</LinearLayout>

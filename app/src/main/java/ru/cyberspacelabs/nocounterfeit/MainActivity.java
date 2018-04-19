@@ -308,7 +308,6 @@ public class MainActivity extends ConfigurableActivity implements LocationListen
 		// final Animation animScale = AnimationUtils.loadAnimation(this, R.anim.scale);
 		animAlpha = AnimationUtils.loadAnimation(this, R.anim.alpha);
 		// buttonScan.startAnimation(animScale);
-
 		locationStatus.setText(R.string.location_in_progress);
 	}
 
@@ -409,6 +408,7 @@ public class MainActivity extends ConfigurableActivity implements LocationListen
 		}
 		buttonScan.setEnabled(false);
 		createGeocoder();
+		// вот тут надо создать проверку метки времени, и только в случае если с последнего изменения прошло 10 минут - обновлять координаты
 		startLocation();
 	}
 

@@ -24,17 +24,17 @@
   <color name="result_view">#b0000000</color>
   <color name="status_text">#ffffffff</color>
   <color name="transparent">#00000000</color>
-  <color name="viewfinder_laser">#ffcc0000</color> <!-- Android standard ICS color -->
+  <color name="viewfinder_laser">#fafcfc</color> <!-- Android standard ICS color -->
   <color name="viewfinder_mask">#60000000</color>
   <color name="originalThemeBackground">#00695C</color>
-  <color name="label_legal">#1e35e6</color>
+  <color name="label_legal">#45006c</color>
   <color name="background_not_activated">#ff6c6f</color>
   <color name="primary">#259b24</color>
   <color name="primary_dark">#0a7e07</color>
   <color name="accent">#40c4ff</color>
-  <color name="primaryColor">#dd2c00</color>
-  <color name="primaryLightColor">#ff6434</color>
-  <color name="primaryDarkColor">#a30000</color>
+  <color name="primaryColor">#ffffff</color>
+  <color name="primaryLightColor">#05af9f</color>
+  <color name="primaryDarkColor">#d68dde</color>
   <color name="primaryTextColor">#ffffff</color>
   <color name="background_material_light">#ffd77a</color>
 </resources>
