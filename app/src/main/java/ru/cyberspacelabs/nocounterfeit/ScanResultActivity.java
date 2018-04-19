@@ -6,6 +6,7 @@ import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
+import android.support.v7.widget.CardView;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -68,6 +69,8 @@ public class ScanResultActivity extends ConfigurableActivity implements Protecti
 	private MapView mapView;
 	private GoogleMap map;
 	private SimpleDateFormat outDateFormat;
+	private CardView cardView;
+	private ImageView validationOkImage;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -116,8 +119,17 @@ public class ScanResultActivity extends ConfigurableActivity implements Protecti
 		validationService.getNearbyScans(getClientID(), getScanResult());
 		validationService.getRegisteredLocations(getClientID(), getScanResult());
 	}
+	private void clearActivity(){
+		cardView = (CardView) findViewById(R.id.card_view);
+		cardView.setVisibility(View.GONE); // убираем карточку
+		mapView.setVisibility(View.GONE); // убираем карту
+	//	validationOkImage = (ImageView) findViewById(R.id.validationOkImage);
+		//validationOkImage.setVisibility(View.GONE);
+	}
 
 	private void resolveControls() {
+
+
 		viewLabelShopAddress = (TextView) findViewById(R.id.labelRegisteredShop);
         viewLabelShopAddress.setTypeface(SingletonFonts.getInstance(this).getBoldFont());
 
@@ -292,16 +304,18 @@ public class ScanResultActivity extends ConfigurableActivity implements Protecti
 	}
 
 	private void warnForCounterfeit() {
-		imageAccent.setVisibility(View.VISIBLE);
-		viewCounterfeitLabel.setVisibility(View.VISIBLE);
-		mapView.setVisibility(View.GONE);
-		viewLocation.setText("");
-		viewLabelShopAddress.setVisibility(View.GONE);
-		viewDescription.setText("");
-		viewStatus.setText(R.string.status_unregistered);
-		viewStatus.setTextColor(Color.WHITE);
-		viewStatus.setBackgroundColor(Color.TRANSPARENT);
-		containerStatus.setBackgroundColor(Color.RED);
+		clearActivity();
+
+//		imageAccent.setVisibility(View.VISIBLE);
+//		viewCounterfeitLabel.setVisibility(View.VISIBLE);
+//		mapView.setVisibility(View.GONE);
+//		viewLocation.setText("");
+//		viewLabelShopAddress.setVisibility(View.GONE);
+//		viewDescription.setText("");
+//		viewStatus.setText(R.string.status_unregistered);
+//		viewStatus.setTextColor(Color.WHITE);
+//		viewStatus.setBackgroundColor(Color.TRANSPARENT);
+//		containerStatus.setBackgroundColor(Color.RED);
 	}
 
 	@Override
