@@ -123,12 +123,11 @@ public class ScanResultActivity extends ConfigurableActivity implements Protecti
 		cardView = (CardView) findViewById(R.id.card_view);
 		cardView.setVisibility(View.GONE); // убираем карточку
 		mapView.setVisibility(View.GONE); // убираем карту
-	//	validationOkImage = (ImageView) findViewById(R.id.validationOkImage);
-		//validationOkImage.setVisibility(View.GONE);
+		validationOkImage.setVisibility(View.GONE);
 	}
 
 	private void resolveControls() {
-
+		validationOkImage = (ImageView) findViewById(R.id.validationOkImage);
 
 		viewLabelShopAddress = (TextView) findViewById(R.id.labelRegisteredShop);
         viewLabelShopAddress.setTypeface(SingletonFonts.getInstance(this).getBoldFont());
