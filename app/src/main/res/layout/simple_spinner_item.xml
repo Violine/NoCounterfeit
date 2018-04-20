@@ -21,7 +21,10 @@
     android:id="@android:id/text1"
     style="?android:attr/spinnerItemStyle"
     android:singleLine="true"
+    android:background="#61ffffff"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:ellipsize="marquee"
+    android:elevation="5dp"
+    android:padding="5dp"
     android:textAlignment="center"/>

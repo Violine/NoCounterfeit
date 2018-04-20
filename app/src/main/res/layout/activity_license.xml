@@ -25,33 +25,35 @@
             android:ems="10"
             android:focusable="false"
             android:inputType="textMultiLine"
-            android:textColor="@color/common_plus_signin_btn_text_light_default" />
+            android:textColor="#FFFFFF" />
     </ScrollView>
 
     <CheckBox
         android:id="@+id/checkBoxAcceptToS"
-        android:theme="@style/MyCheckBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/buttonAcceptToS"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+        android:buttonTint="#ff001e"
         android:padding="3dp"
         android:text="@string/label_accept_tos"
-        android:textColor="@color/common_plus_signin_btn_text_light_default"
-        android:textColorLink="@android:color/holo_blue_light" />
+        android:textColor="#ff001e"
+        android:textColorLink="@android:color/holo_blue_light"
+        android:theme="@style/MyCheckBox" />
 
     <Button
+        android:background="#a820b7"
+        android:id="@+id/buttonAcceptToS"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/buttonAcceptToS"
         android:layout_alignParentBottom="true"
-        android:textColor="#FFFF"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
-        android:text="@string/label_button_continue"/>
+        android:layout_alignParentStart="true"
+        android:text="@string/label_button_continue"
+        android:textColor="#FFFF" />
 
     <Spinner
         android:id="@+id/dropdownLanguage"
@@ -71,17 +73,24 @@
         android:layout_alignBottom="@+id/dropdownLanguage"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:text="Language" />
+        android:text="Language"
+        android:textColor="#c201bf"
+        android:textSize="18dp" />
 
-    <Button
-        android:id="@+id/languageOK"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/dropdownLanguage"
-        android:textColor="#FFFF"
-        android:padding="7dp"
-        android:text="OK" />
+
+        <Button
+            android:id="@+id/languageOK"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/dropdownLanguage"
+            android:background="#a820b7"
+            android:padding="7dp"
+            android:text="OK"
+            android:textColor="#FFFF" />
+
+
+
 
 </RelativeLayout>

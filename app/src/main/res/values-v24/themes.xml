@@ -12,4 +12,9 @@
         <item name="android:textColorSecondary">#ffffff</item>
         <item name="android:colorBackground">@color/primaryLightColor</item>
     </style>
+
+    <style name="CounterFiethButton" parent="Widget.AppCompat.Button.Colored">
+        <item name="backgroundTint">#323587</item>
+        <item name="android:textColor">#ab4343</item>
+    </style>
 </resources>
