@@ -78,6 +78,8 @@ public class ScanResultActivity extends ConfigurableActivity implements Protecti
     private RelativeLayout vlaidationErrorLayout;
     private TextView errorText;
     private CardView errorCardView;
+    private View mapFragment;
+    private TextView scanInProcess;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -163,6 +165,11 @@ public class ScanResultActivity extends ConfigurableActivity implements Protecti
         viewCounterfeitLabel.setTypeface(SingletonFonts.getInstance(this).getNormalFont());
 
         imageAccent = (ImageView) findViewById(R.id.imageCounterfeitAccent);
+
+
+        scanInProcess = (TextView) findViewById(R.id.scanInProcess);
+
+
         map = mapView.getMap();
         map.getUiSettings().setMyLocationButtonEnabled(true);
         if (ActivityCompat.checkSelfPermission(this,
@@ -227,6 +234,8 @@ public class ScanResultActivity extends ConfigurableActivity implements Protecti
                             if (protectionRegistration.getExpired().getTime() > System.currentTimeMillis()) {
                                 displayShopAddress();
                                 showLocationsOnMap();
+                                validationOkImage.setVisibility(View.VISIBLE);
+                                scanInProcess.setVisibility(View.GONE);
                                 // ... and attract attention
                                 viewStatus.setText(R.string.status_ok);
                                 viewStatus.setTextColor(getResources().getColor(R.color.label_legal));
@@ -265,6 +274,7 @@ public class ScanResultActivity extends ConfigurableActivity implements Protecti
         errorText.setText(R.string.status_product_expired + " " + outDateFormat.format(protectionRegistration.getExpired()));
         errorCardView.setCardBackgroundColor(Color.YELLOW);
         mapView.setVisibility(View.GONE);
+        scanInProcess.setVisibility(View.GONE);
         viewLabelShopAddress.setVisibility(View.GONE);
 
 //        viewStatus.setTextColor(Color.BLACK);
@@ -278,6 +288,7 @@ public class ScanResultActivity extends ConfigurableActivity implements Protecti
 
     private void displayShopAddress() {
         viewLabelShopAddress.setVisibility(View.VISIBLE);
+        scanInProcess.setVisibility(View.GONE);
         ScanResult result = registeredLocations.getHistory().get(0);
         // ,,, once - place the result into appropriated field
         if (registeredLocations.getHistory().size() == 1) {
@@ -312,8 +323,9 @@ public class ScanResultActivity extends ConfigurableActivity implements Protecti
     private void warnForInactive() {
 
         mapView.setVisibility(View.GONE);
+        scanInProcess.setVisibility(View.GONE);
         vlaidationErrorLayout.setBackgroundDrawable(getResources().getDrawable(R.drawable.label_notactive_background));
-       // vlaidationErrorLayout.setBackground(getResources().getDrawable(R.drawable.label_notactive_background));
+        // vlaidationErrorLayout.setBackground(getResources().getDrawable(R.drawable.label_notactive_background));
         errorCardView.setCardBackgroundColor(Color.CYAN);
         vlaidationErrorLayout.setVisibility(View.VISIBLE);
 
@@ -331,12 +343,13 @@ public class ScanResultActivity extends ConfigurableActivity implements Protecti
     private void warnForCounterfeit() {
 
         mapView.setVisibility(View.GONE);
+        scanInProcess.setVisibility(View.GONE);
         viewLabelShopAddress.setVisibility(View.GONE);
         vlaidationErrorLayout.setVisibility(View.VISIBLE);
         vlaidationErrorLayout.setBackgroundDrawable(getResources().getDrawable(R.drawable.validation_error_background));
         String str = getResources().getString(R.string.status_unregistered);
         errorText.setText(getResources().getString(R.string.status_unregistered));
-        errorCardView.setCardBackgroundColor(Color.rgb(235,135,50));
+        errorCardView.setCardBackgroundColor(Color.rgb(235, 135, 50));
 
 //        clearActivity();
 //        idResultLayout.setBackgroundColor(Color.RED);

@@ -252,7 +252,6 @@ public class MainActivity extends ConfigurableActivity implements LocationListen
     }
 
     private void saveCurrentTime(long time) { // сохраняем время в настройках
-
         SharedPreferences.Editor editor = getSharedPreferences(getPackageName(), MODE_PRIVATE).edit();
         editor.putLong(Util.PREFERENCE_KEY_TIME, time);
         editor.commit();

@@ -204,5 +204,6 @@
         <item>Light</item>
     </string-array>
     <string name="scanbuttonText">Scan</string>
+    <string name="scan_process">Scanning label process</string>
 
 </resources>

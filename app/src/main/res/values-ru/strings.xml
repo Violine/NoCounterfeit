@@ -204,4 +204,5 @@
     <item>Светлая</item>
   </string-array>
     <string name="scanbuttonText">Сканировать</string>
+    <string name="scan_process">Идет распознавание метки</string>
 </resources>
