@@ -46,6 +46,7 @@ public class Util {
 	public static final String PREFERENCE_KEY_GEOCODER = "geocoding";
 	public static final String PREFERENCE_KEY_THEME = "theme";
 	public static final String PREFERENCE_KEY_DEVICEID = "device.id";
+	public static final String PREFERENCE_KEY_TIME = "time";
 
 	private static ExecutorService backgroundTaskThreadPool;
 	private static String source = "абвгдежзиклмнопрстуфхцчшщъыьэюяz";
