@@ -193,7 +193,7 @@ public class MainActivity extends ConfigurableActivity implements LocationListen
         boolean isNetworkEnabled = locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
         long currentTime = Calendar.getInstance().getTime().getTime(); // текущее вермя
         long lastCurrentTime = getSharedPreferences(getPackageName(), MODE_PRIVATE).getLong(Util.PREFERENCE_KEY_TIME, 0);
-        if ((currentTime - lastCurrentTime) > 60000) {
+        if ((currentTime - lastCurrentTime) > 60000) { // ждем минуту
             saveCurrentTime(currentTime);
             Toast.makeText(this, "Определяем новые координаты", Toast.LENGTH_SHORT).show();
             if (!isGPSEnabled && !isNetworkEnabled) {
