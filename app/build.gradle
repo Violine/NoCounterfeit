@@ -28,6 +28,11 @@ android {
             keyPassword "p@ssw0rd"
         }
     }
+    lintOptions {
+
+        checkReleaseBuilds false
+
+    }
 
     buildTypes {
         release {

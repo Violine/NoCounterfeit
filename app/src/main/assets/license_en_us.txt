@@ -1,7 +1,7 @@
 LICENSE AGREEMENT
 for the Use of NOCOUNTERFEIT Goods Authentication Program software products and/or online services.
 
-The present document, the License Agreement for the Use of NC Goods Authentication Program software products and/or online services (hereinafter – the License, the Agreement), constitutes an offer from .... Limited Liability Company (hereinafter - the Rightholder, the Licensor) to enter into an agreement on the terms and conditions set out below.
+The present document, the License Agreement for the Use of NC Goods Authentication Program software products and/or online services (hereinafter – the License, the Agreement), constitutes an offer from NK Limited Liability Company (hereinafter - the Rightholder, the Licensor) to enter into an agreement on the terms and conditions set out below.
 Prior to download, installation or other use of NC software products and/or online services please refer to the terms and conditions of this license agreement.
 This Agreement is deemed to be in effect from the time NC Software Product is installed on (copied to) any device and/or otherwise put into use.
 1. GENERAL
@@ -15,7 +15,7 @@ d) The Agreement (including any part thereof) may be amended by the Rightholder 
 1.3. The words and expressions used in this License Agreement shall have the following meanings, unless otherwise expressly defined below:
 a) License (Agreement) means this License Agreement for the Use of NC Software Products and/or Online Services.
 b) NC Online Services means a set of NC Software Products and the Rightholder’s hardware which are made accessible to Users under the terms and conditions set out in this Agreement and/or other agreements.
-c) Rightholder means ...... Limited Liability Company.
+c) Rightholder means NK Limited Liability Company.
 d) You, User means a legal entity or a private person that entered into this Agreement with the Rightholder for its/their own benefit or for the benefit of others in accordance with the requirements of the applicable laws and this Agreement.
 e) NC Software Products means the software solutions owned by the Rightholder along with each individual computer program or database incorporated in them or used together with them, as well as all their subsequent updates and modifications intended for use on desktop and handheld personal computers, mobile phones, PDAs, smartphones and other devices.
 f) Product means the Software Product and/or Online Services in the meaning defined in this Agreement.
